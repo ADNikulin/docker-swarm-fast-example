@@ -1,0 +1,22 @@
+all:
+  children:
+    managers:
+      hosts:
+        manager-01:
+          ansible_host: 89.169.167.187
+        manager-02:
+          ansible_host: 89.169.166.165
+        manager-03:
+          ansible_host: 89.169.163.85
+    workers:
+      hosts:
+        worker-01:
+          ansible_host: 89.169.161.19
+        worker-02:
+          ansible_host: 89.169.167.185
+        worker-03:
+          ansible_host: 62.84.121.228
+  vars:
+    ansible_host_key_checking: false
+    ansible_user: user
+    ansible_become: true

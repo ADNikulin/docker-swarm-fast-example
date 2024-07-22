@@ -1,0 +1,12 @@
+- name: Test connection to hosts
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: PING - Test connection
+      ansible.builtin.ping:
+
+- name: Setup docker engine and python plugins for docker compose
+  hosts:
+    - all
+  roles:
+    - docker-host
